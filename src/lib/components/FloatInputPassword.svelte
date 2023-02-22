@@ -33,28 +33,30 @@
 	};
 </script>
 
-<div class="input-group my-5">
-	<div class="form-floating">
-		<input
-			{name}
-			placeholder=" "
-			use:resetAction
-			type="password"
-			class="input input-bordered w-full {!!errorMessage &&
-				(isTouched || isSubmitted) &&
-				'input-error'}"
-			on:input={() => (isTouched = true)}
-			bind:value
-		/>
-		<label for={name} class="label"> {labelText} </label>
-		{#if !!errorMessage && (isTouched || isSubmitted)}
-			<div class="flex items-center absolute py-1 px-2 whitespace-nowrap text-error">
-				<Icon class="mx-2" icon="ph:warning-fill" />
-				<span class="p-0 bg-transparent">{errorMessage}</span>
-			</div>
-		{/if}
+<div class="inline-block w-full relative my-5">
+	<div class="input-group">
+		<div class="form-floating">
+			<input
+				{name}
+				placeholder=" "
+				use:resetAction
+				type="password"
+				class="input input-bordered w-full {!!errorMessage &&
+					(isTouched || isSubmitted) &&
+					'input-error'}"
+				on:input={() => (isTouched = true)}
+				bind:value
+			/>
+			<label for={name} class="label"> {labelText} </label>
+		</div>
+		<span class="px-2 cursor-pointer" on:click={changeType}>
+			<Icon icon={eyeIcon} width="20" height="20" />
+		</span>
 	</div>
-	<span class="px-2 cursor-pointer" on:click={changeType}>
-		<Icon icon={eyeIcon} width="20" height="20" />
-	</span>
+	{#if !!errorMessage && (isTouched || isSubmitted)}
+		<div class="flex items-center absolute whitespace-nowrap text-error">
+			<Icon class="mx-2" icon="ph:warning-fill" />
+			<span class="p-0 bg-transparent">{errorMessage}</span>
+		</div>
+	{/if}
 </div>

@@ -1,5 +1,6 @@
-export const yupValidator = async (formObj, schema) => {
+export const yupValidator = async (formData, schema) => {
 	try {
+		const formObj = Object.fromEntries(await formData.entries());
 		await schema.validate(formObj, { abortEarly: false });
 	} catch (errors) {
 		const fieldErrors = errors.inner.reduce(

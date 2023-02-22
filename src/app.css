@@ -31,7 +31,7 @@
 }
 
 .form-floating label {
-	@apply absolute p-0 px-2 left-4 top-0 h-full duration-300;
+	@apply absolute p-0 px-2 left-4 top-0 h-full pointer-events-none transition-transform duration-300;
 }
 
 .form-floating textarea ~ label {
@@ -53,12 +53,12 @@
 .form-floating input:not(:placeholder-shown) ~ label,
 .form-floating select:focus ~ label,
 .form-floating select:not([value='']):valid ~ label {
-	@apply transform scale-90 -translate-y-[60%] left-2 z-0 bg-[hsl(var(--b1))]  h-fit;
+	@apply scale-90 -translate-y-[60%] left-4 z-0 bg-[hsl(var(--b1))]  h-fit;
 }
 
 .form-floating textarea:focus ~ label,
 .form-floating textarea:not(:placeholder-shown) ~ label {
-	@apply transform scale-90 -translate-y-[110%] left-3 z-0 bg-[hsl(var(--b1))]  h-fit;
+	@apply scale-90 -translate-y-[110%] left-4 z-0 bg-[hsl(var(--b1))]  h-fit;
 }
 
 .input-group .form-floating > *,

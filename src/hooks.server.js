@@ -1,3 +1,4 @@
+import { redirect } from '@sveltejs/kit';
 /** @type {import('@sveltejs/kit').Handle} */
 export async function handle({ event, resolve }) {
 	let currentTheme = event.cookies.get('theme');
@@ -12,5 +13,12 @@ export async function handle({ event, resolve }) {
 	const response = await resolve(event, {
 		transformPageChunk: ({ html }) => html.replace('data-theme=""', `data-theme="${currentTheme}"`)
 	});
+	if (event.url.pathname === '/') {
+		return redirect(301, '/login');
+		// return new Response(null, {
+		// 	status: 301,
+		// 	headers: { location: '/login' }
+		// });
+	}
 	return response;
 }
