@@ -20,5 +20,3 @@ const formDataObj = () => {
 };
 
 export const formStore = formDataObj();
-
-export const themeStore = writable('');

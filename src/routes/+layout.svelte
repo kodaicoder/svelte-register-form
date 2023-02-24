@@ -1,11 +1,12 @@
 <script>
-	import { themeStore } from '$lib/stores/store';
 	import '../app.css';
-	/** @type {import('./$types').LayoutData} */
-	export let data;
-	themeStore.set(data.theme ?? '');
+	import Header from '$lib/components/Header.svelte';
+	import PageTransition from '$lib/components/PageTransition.svelte';
 </script>
 
+<Header />
 <main>
-	<slot />
+	<PageTransition duration={200}>
+		<slot />
+	</PageTransition>
 </main>

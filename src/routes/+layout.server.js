@@ -1,6 +1,7 @@
 /** @type {import('./$types').LayoutServerLoad} */
 
-export async function load({ cookies }) {
+export async function load({ cookies, locals }) {
 	const currentTheme = cookies.get('theme');
-	return { theme: currentTheme };
+	const { user } = await locals.validateUser();
+	return { user, theme: currentTheme };
 }

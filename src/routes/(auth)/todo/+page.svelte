@@ -3,4 +3,4 @@
 	export let data;
 </script>
 
-<h1>This is auth page you should see after login</h1>
+<h1>This is a Todo page that need authenticate to access</h1>

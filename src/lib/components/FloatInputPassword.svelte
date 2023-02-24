@@ -5,7 +5,6 @@
 	export let value = '';
 	export let errorMessage = '';
 	export let isSubmitted = false;
-	export let isCanShowPass = false;
 
 	let isTouched = false;
 	let eyeIcon = 'ph:eye-duotone';

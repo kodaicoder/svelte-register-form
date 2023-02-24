@@ -4,6 +4,7 @@
 	import { loginSchema } from '$lib/yup/schema.js';
 	import FloatInput from '$lib/components/FloatInput.svelte';
 	import FloatInputPassword from '$lib/components/FloatInputPassword.svelte';
+	import toast, { Toaster } from 'svelte-french-toast';
 
 	let fieldErrors = {};
 	let isSubmitted = false;
@@ -29,11 +30,28 @@
 		////! After form submitted
 		return async ({ result, update }) => {
 			isSubmitted = false;
+			switch (result.type) {
+				case 'success':
+					console.log('Login :', 'success!');
+					break;
+				case 'failure':
+					console.warn('Login :', 'FAIL!');
+					toast.error('Login failed , email or password is incorrect.', {
+						position: 'bottom-center'
+					});
+					break;
+				case 'error':
+					console.error('Login :', 'ERROR!');
+					break;
+				default:
+				// code block
+			}
 			update();
 		};
 	};
 </script>
 
+<Toaster />
 <div class="flex flex-col items-center justify-center h-full">
 	<div class="card card-bordered flex-shrink-0 w-full max-w-md shadow-2xl bg-base-100">
 		<div class="card-body">

@@ -31,7 +31,12 @@
   },
   "type": "module",
   "dependencies": {
+    "@lucia-auth/adapter-prisma": "^0.4.0",
+    "@lucia-auth/sveltekit": "^0.6.3",
+    "@prisma/client": "^4.10.1",
     "daisyui": "^2.50.2",
+    "lucia-auth": "^0.6.1",
+    "svelte-french-toast": "^1.0.3",
     "yup": "^1.0.0"
   },
   "description": "Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).",
