@@ -10,7 +10,7 @@
 	};
 </script>
 
-<label class="text-[17px] relative inline-block w-[4em] h-[1.8em]">
+<label class=" cursor-pointer text-[17px] relative inline-block w-[4em] h-[1.8em]">
 	<input class="opacity-0 w-0 h-0" type="checkbox" bind:checked on:change={change} />
 	<span class="slider" />
 </label>

@@ -48,8 +48,10 @@
 			/>
 			<label for={name} class="label"> {labelText} </label>
 		</div>
-		<span class="px-2 cursor-pointer" on:click={changeType}>
-			<Icon icon={eyeIcon} width="20" height="20" />
+		<span class="p-0">
+			<button type="button" class="px-2 w-full h-full cursor-pointer" on:click={changeType}>
+				<Icon icon={eyeIcon} width="20" height="20" />
+			</button>
 		</span>
 	</div>
 	{#if !!errorMessage && (isTouched || isSubmitted)}

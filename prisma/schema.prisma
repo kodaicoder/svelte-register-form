@@ -13,9 +13,11 @@ datasource db {
 model User {
   id       String    @id @unique
   name String
+  email String @unique
   username String @unique
   session  Session[]
   Key      Key[]
+  todos Todo[]
   // here you can add custom fields for your user
   // e.g. name, email, username, roles, etc.
 
@@ -42,4 +44,14 @@ model Key {
 
   @@index([user_id])
   @@map("key")
+}
+
+
+model Todo{
+  id Int @id @default(autoincrement())
+  title String
+  detail String
+  isDone Boolean
+  User User @relation(fields: [userId],references: [id])
+  userId String
 }

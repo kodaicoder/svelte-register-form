@@ -6,6 +6,7 @@ declare namespace Lucia {
 	type UserAttributes = {
 		username: string;
 		name: string;
+		email: string;
 	};
 }
 

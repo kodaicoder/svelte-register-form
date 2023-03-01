@@ -31,20 +31,18 @@
 		return async ({ result, update }) => {
 			isSubmitted = false;
 			switch (result.type) {
-				case 'success':
-					console.log('Login :', 'success!');
-					break;
 				case 'failure':
-					console.warn('Login :', 'FAIL!');
 					toast.error('Login failed , email or password is incorrect.', {
-						position: 'bottom-center'
+						style: 'border-radius: 1rem; background: hsl(var(--er)); color: hsl(var(--erc));',
+						position: 'top-right'
 					});
+					update({ reset: false });
 					break;
 				case 'error':
 					console.error('Login :', 'ERROR!');
+					update({ reset: false });
 					break;
 				default:
-				// code block
 			}
 			update();
 		};

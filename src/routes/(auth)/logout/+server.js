@@ -1,13 +1,6 @@
-import { auth } from '$lib/server/lucia';
-import { redirect } from '@sveltejs/kit';
+import { logout } from '$lib/server/api/userManagement';
 
 /** @type {import('./$types').RequestHandler} */
 export const POST = async ({ locals }) => {
-	const session = await locals.validate();
-	if (!session) {
-		throw redirect(302, '/');
-	}
-	await auth.invalidateSession(session.sessionId);
-	locals.setSession(null);
-	throw redirect(302, '/');
+	await logout(locals);
 };

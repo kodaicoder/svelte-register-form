@@ -19,7 +19,5 @@
 </script>
 
 <div class="form-control">
-	<div class="label cursor-pointer">
-		<Toggle bind:checked={isDarkTheme} on:change={setTheme} />
-	</div>
+	<Toggle bind:checked={isDarkTheme} on:change={setTheme} />
 </div>
