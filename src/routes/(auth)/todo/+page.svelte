@@ -66,9 +66,9 @@
 						<p>{todo.detail}</p>
 						<div class="card-actions flex justify-center mt-4 gap-5">
 							<form action="?/deleteTodo&id={todo.id}" method="POST" use:enhance>
-								<button type="submit" class="btn btn-sm btn-error">Delete Todo</button>
+								<button type="submit" class="btn btn-sm btn-error">Delete</button>
 							</form>
-							<a href="/{todo.id}" role="button" class="btn btn-sm btn-info">Edit Todo</a>
+							<a href="/{todo.id}" role="button" class="btn btn-sm btn-info">Edit</a>
 						</div>
 					</div>
 				</div>
