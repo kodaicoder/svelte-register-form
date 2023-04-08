@@ -6,7 +6,6 @@
 
 {#key $navigating}
 	{#if !$navigating}
-		<!-- {#key key} -->
 		<div
 			class="flex justify-center absolute w-full mt-3"
 			in:fade={{ duration, delay: duration }}

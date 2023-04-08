@@ -22,7 +22,7 @@
 	<div
 		class="flex fixed justify-center items-center z-50 left-0 top-0 w-full h-full overflow-auto bg-black/60"
 		transition:containerTransition={{ duration: transitionDuration }}
-		on:click|self={outsideClick}
+		on:mousedown|self={outsideClick}
 	>
 		<!-- Modal content -->
 		<div

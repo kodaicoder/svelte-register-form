@@ -26,7 +26,11 @@
 
 		//? yup validate before form submit event
 		fieldErrors = await yupValidator(formData, registerSchema);
-		if (!!fieldErrors) {
+		if (!!fieldErrors || !navigator.onLine) {
+			toast.error('Something went wrong with your connection.', {
+				style: 'border-radius: 1rem; background: hsl(var(--er)); color: hsl(var(--erc));',
+				position: 'top-right'
+			});
 			cancel();
 		}
 

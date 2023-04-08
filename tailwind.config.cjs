@@ -7,6 +7,7 @@ module.exports = {
 	plugins: [require('daisyui')],
 	// daisyUI config (optional)
 	daisyui: {
-		themes: ['emerald', 'dark']
+		themes: ['emerald', 'dark'],
+		darkTheme: 'dark'
 	}
 };

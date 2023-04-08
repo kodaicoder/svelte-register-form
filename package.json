@@ -34,6 +34,7 @@
     "@lucia-auth/adapter-prisma": "^0.4.0",
     "@lucia-auth/sveltekit": "^0.6.3",
     "@prisma/client": "^4.10.1",
+    "axios": "^1.3.4",
     "daisyui": "^2.50.2",
     "lucia-auth": "^0.6.1",
     "svelte-french-toast": "^1.0.3",

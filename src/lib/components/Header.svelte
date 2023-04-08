@@ -61,7 +61,11 @@
 		<div class="navbar-end flex ml-auto">
 			{#if isAuth}
 				<form method="POST">
-					<button class="btn btn-sm btn-outline btn-error mr-3" type="submit" formaction="/logout">
+					<button
+						class="btn btn-sm btn-outline btn-error mr-3"
+						type="submit"
+						formaction="/api/logout"
+					>
 						<Icon icon="ph:sign-out" width={25} height={25} />
 						<span class="ml-2 hidden md:block"> Logout </span>
 					</button>

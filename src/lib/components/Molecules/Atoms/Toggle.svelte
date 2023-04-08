@@ -1,17 +1,17 @@
 <script>
 	export let checked;
-	import { createEventDispatcher } from 'svelte';
+	// import { createEventDispatcher } from 'svelte';
 
-	const dispatch = createEventDispatcher();
-	const change = (ev) => {
-		dispatch('change', {
-			nodeEvent: ev
-		});
-	};
+	// const dispatch = createEventDispatcher();
+	// const change = (ev) => {
+	// 	dispatch('change', {
+	// 		nodeEvent: ev
+	// 	});
+	// };
 </script>
 
 <label class=" cursor-pointer text-[17px] relative inline-block w-[4em] h-[1.8em]">
-	<input class="opacity-0 w-0 h-0" type="checkbox" bind:checked on:change={change} />
+	<input class="opacity-0 w-0 h-0" type="checkbox" bind:checked on:change />
 	<span class="slider" />
 </label>
 

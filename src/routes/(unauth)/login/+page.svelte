@@ -4,7 +4,7 @@
 	import { loginSchema } from '$lib/yup/schema.js';
 	import FloatInput from '$lib/components/FloatInput.svelte';
 	import FloatInputPassword from '$lib/components/FloatInputPassword.svelte';
-	import toast, { Toaster } from 'svelte-french-toast';
+	import toast from 'svelte-french-toast';
 
 	let fieldErrors = {};
 	let isSubmitted = false;
@@ -49,7 +49,6 @@
 	};
 </script>
 
-<Toaster />
 <div class="flex flex-col items-center justify-center h-full">
 	<div class="card card-bordered flex-shrink-0 w-full max-w-md shadow-2xl bg-base-100">
 		<div class="card-body">

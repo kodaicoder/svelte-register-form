@@ -44,3 +44,16 @@ export const registerSchema = y.object({
 
 	terms: y.boolean().oneOf([true], 'You must accept the terms and conditions.')
 });
+
+export const addToDoSchema = y.object({
+	title: y
+		.string()
+		.trim()
+		.required('Title is required.')
+		.max(50, 'Title must be at most 50 characters.'),
+	detail: y
+		.string()
+		.trim()
+		.required('Detail is required.')
+		.max(500, 'Detail must be at most 500 characters.')
+});
